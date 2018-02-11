@@ -5,6 +5,10 @@ import zipfile
 import mimetypes
 
 def lambda_handler(event, context):
+    sns = boto3.resource('sns')
+    topic = sns.Topic('arn:aws:sns:us-east-1:822374759106:deployMirelesCloudTopic')
+
+
 
     s3 = boto3.resource('s3')
     portfolio_bucket = s3.Bucket('mirelescloud.com')
@@ -19,6 +23,7 @@ def lambda_handler(event, context):
             portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
 
     print "Great Success"
+    topic.publish(Subject="MirelesCloud Portfolio", Message="Great Success")
 
     # TODO implement
     return 'Hello from Lambda'
