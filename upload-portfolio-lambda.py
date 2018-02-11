@@ -25,6 +25,8 @@ def lambda_handler(event, context):
         topic.publish(Subject="MirelesCloud Portfolio", Message="Great Success")
     except:
         topic.publish(Subject="Error - MirelesCloud Portfolio", Message="Failure")
+        raise
+    
 
     # TODO implement
     return 'Hello from Lambda'
