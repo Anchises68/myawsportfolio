@@ -17,11 +17,11 @@ def lambda_handler(event, context):
         job = event.get("CodePipeline.job")
 
         if job:
-            for artifact in job["name"]["inputArtifacts"]:
+            for artifact in job["data"]["inputArtifacts"]:
                 if artifact["name"] == "MyAppBuild":
                     location = artifact["location"]["s3Location"]
 
-         print "Building portoflio from " + str(location)
+        print "Building portoflio from " + str(location)
         s3 = boto3.resource('s3')
         portfolio_bucket = s3.Bucket('mirelescloud.com')
         build_bucket = s3.Bucket(location["bucketName"])
