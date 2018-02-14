@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { configure, shallow, mount, render } from 'enzyme';
 import ExampleWork, { ExampleWorkBubble } from '../js/example-work';
-import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
 
@@ -44,6 +43,10 @@ describe("ExampleWorkBubble component", () => {
 
   it("Should contain a single 'img' element", () => {
     expect(images.length).toEqual(1);
+  });
+
+  it("Should have the image src set correctly", () => {
+    expect(images.getElement().props.src).toEqual(myWork[1].image.src);
   });
 
 });
