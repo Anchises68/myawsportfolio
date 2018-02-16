@@ -4,9 +4,9 @@ import ExampleWork from './example-work.js';
 
 const myWork = [
   {
-    'title': "Work Example 1",
-    'href': "https://example.com",
-    'desc': "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    'title': "Work Example",
+    'href': "http://mirelescommunications.com",
+    'desc': "This is my original portfolio that I have built in 2017.  It is built on a Ruby on Rails framework.  The site includes links of other projects that I have workd on.",
     'image': {
       'desc': "example screenshot of a project involving code",
       'src': "images/example1.png",
@@ -14,8 +14,8 @@ const myWork = [
     }
   },
   {
-    'title': "mirelescommunications",
-    'href': "http://mirelescommunications.com",
+    'title': "Work Example",
+    'href': "https://example.com",
     'desc': "Lorem ipsum",
     'image': {
       'desc': "example screenshot of a project involving chemistry",
@@ -24,7 +24,7 @@ const myWork = [
     }
   },
   {
-    'title': "Work Example 3",
+    'title': "Work Example",
     'href': "https://example.com",
     'desc': "Lorem ipsum",
     'image': {
