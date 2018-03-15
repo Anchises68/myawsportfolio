@@ -33,6 +33,7 @@ const myWork = [
       'comment': `Bengal cat” by roberto shabs is licensed under CC BY 2.0
                   https://www.flickr.com/photos/37287295@N00/2540855181`
     }
+    
   },
 ]
 ReactDOM.render(<ExampleWork work={myWork}/>, document.getElementById('example-work'));
