@@ -17,7 +17,7 @@ const myWork = [
   {
     'title': "Molly's Portfolio",
     'href': "https://mollymireles.com",
-    'desc': "This is my wife's portfolio built and deployed in the AWS cloud.  It is also built with ReactJS and is still in development.",
+    'desc': "This is my wife's portfolio built and deployed in the AWS cloud.  Also built on ReactJS framework and still in development.",
     'image': {
       'desc': "Molly Mireles screenshot",
       'src': "images/work2.png",
