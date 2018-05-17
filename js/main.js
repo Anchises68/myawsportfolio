@@ -1,39 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work.js';
+console.log("loaded react-dom");
 
 const myWork = [
   {
-    'title': "Work Example",
-    'href': "http://mirelescommunications.com",
-    'desc': "This is my original portfolio that I have built in 2017.  It is built on a Ruby on Rails framework.  The site includes links of other projects that I have workd on.",
+    'title': "Ruby on Rails Portfolio",
+    'href': "https://sleepy-mountain-30199.herokuapp.com/welcome",
+    'desc': "This is my original portfolio that I have built in 2017.  Built on a Ruby on Rails framework and deployed on Heroku, the site includes links of other projects.",
     'image': {
-      'desc': "example screenshot of a project involving code",
-      'src': "images/example1.png",
+      'desc': "Königsee, Germany",
+      'src': "images/P1000946.png",
       'comment': ""
     }
   },
   {
-    'title': "Work Example",
-    'href': "https://example.com",
-    'desc': "Lorem ipsum",
+    'title': "Molly's Portfolio",
+    'href': "https://mollymireles.com",
+    'desc': "This is my wife's portfolio built and deployed in the AWS cloud.  It is also built with ReactJS and is still in development.",
     'image': {
-      'desc': "example screenshot of a project involving chemistry",
-      'src': "images/example2.png",
+      'desc': "Molly Mireles screenshot",
+      'src': "images/work2.png",
       'comment': ""
     }
   },
   {
-    'title': "Work Example",
-    'href': "https://example.com",
-    'desc': "Lorem ipsum",
+    'title': "Class of '68'",
+    'href': "http://gemstateclassof68.com.s3-website-us-east-1.amazonaws.com/",
+    'desc': "This is my first commissioned project.  Again, built on ReactJS and deployed in the AWS cloud.  The original is password protected and distributed through Cloudfront.",
     'image': {
-      'desc': "example screenshot of a project involving cats",
-      'src': "images/example3.png",
-      'comment': `Bengal cat” by roberto shabs is licensed under CC BY 2.0
-                  https://www.flickr.com/photos/37287295@N00/2540855181`
+      'desc': "Class of '68 Screenshot'",
+      'src': "images/work3.png",
+      'comment': ""
     }
-    
+
   },
 ]
 ReactDOM.render(<ExampleWork work={myWork}/>, document.getElementById('example-work'));
