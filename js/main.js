@@ -25,7 +25,7 @@ const myWork = [
     }
   },
   {
-    'title': "Class of '68'",
+    'title': "Class of '68",
     'href': "http://gemstateclassof68.com.s3-website-us-east-1.amazonaws.com/",
     'desc': "This is my first commissioned project.  Again, built on ReactJS and deployed in the AWS cloud.  The original is password protected and distributed through Cloudfront.",
     'image': {
