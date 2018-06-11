@@ -12,9 +12,7 @@ class ExampleWorkModal extends React.Component {
           onClick={this.props.closeModal}>
           <i className="fa fa-window-close-o"></i>
         </span>
-        <img alt={ example.image.desc }
-          className="modal__image"
-          src={ example.image.src }/>
+        <img className="modal__image" alt={ example.image.desc } src={ example.image.src }/>
         <div className="color--cloud modal__text">
           <h2 className="modal__title">
             { example.title }

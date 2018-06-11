@@ -10,8 +10,7 @@ const myWork = [
     'desc': "This is my original portfolio that I have built in 2017.  Built on a Ruby on Rails framework and deployed on Heroku, the site includes links of other projects.",
     'image': {
       'desc': "Königsee, Germany",
-      'src': "images/P1000946.png",
-      'comment': ""
+      'src': "images/P1000946.png"
     }
   },
   {
@@ -20,8 +19,8 @@ const myWork = [
     'desc': "This is my wife's portfolio built and deployed in the AWS cloud.  Also built on ReactJS framework and still in development.",
     'image': {
       'desc': "Molly Mireles screenshot",
-      'src': "images/work2.png",
-      'comment': ""
+      'src': "images/work2.png"
+
     }
   },
   {
@@ -30,8 +29,7 @@ const myWork = [
     'desc': "This is my first commissioned project.  Again, built on ReactJS and deployed in the AWS cloud.  The original is password protected and distributed through Cloudfront.",
     'image': {
       'desc': "Class of '68 Screenshot'",
-      'src': "images/work3.png",
-      'comment': ""
+      'src': "images/work3.png"
     }
 
   },
