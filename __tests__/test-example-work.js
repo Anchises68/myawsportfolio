@@ -39,7 +39,7 @@ describe("ExampleWork component", () => {
     component.instance().openModal();
     expect(component.instance().state.modalOpen).toBe(true);
     component.instance().closeModal();
-    expect(component.instance().state.modalOpen).toBe(true);
+    expect(component.instance().state.modalOpen).toBe(false);
   });
 });
 
