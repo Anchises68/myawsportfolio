@@ -56,9 +56,7 @@ class ExampleWorkBubble extends React.Component {
       <div className="section__exampleWrapper"
         onClick={ (evt) => this.props.openModal(evt, example) }>
         <div className="section__example">
-          <img alt={ example.image.desc}
-            className="section__exampleImage"
-            src={ example.image.src }/>
+          <img className="section__exampleImage" alt={ example.image.desc} src={ example.image.src }/>
           <dl className="color--cloud">
             <dt className="section__exampleTitle section__text--centered">
               { example.title }
