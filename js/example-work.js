@@ -29,22 +29,22 @@ class ExampleWork extends React.Component {
 
   render() {
     return (
-      <span>
-        <section className="section section--alignCentered section--description">
+      <section>
+        <div className="container">
+          <div className="card-columns">
 
-          { this.props.work.map( (example, idx) => {
-            return (
-              <ExampleWorkBubble example={example} key={idx}
-                openModal={this.openModal} />
-            )
-          })
-          }
-
-        </section>
-
+            { this.props.work.map( (example, idx) => {
+              return (
+                <ExampleWorkBubble example={example} key={idx}
+                  openModal={this.openModal} />
+              )
+            })
+            }
+          </div>
+        </div>
         <ExampleWorkModal example={this.state.selectedExample}
           open={this.state.modalOpen} closeModal={this.closeModal}/>
-      </span>
+      </section>
         )
   }
 }
@@ -53,9 +53,25 @@ class ExampleWorkBubble extends React.Component {
   render() {
     let example = this.props.example;
     return (
-      <div className="section__exampleWrapper"
+      <div className="card h-100"
         onClick={ (evt) => this.props.openModal(evt, example) }>
-        <div className="section__example">
+        <h3 className="card-header">Example</h3>
+        <div className="card-body">
+          <h5 className="card-title">{ example.title }</h5>
+          <h6 className="card-subtitle text-muted">Support card subtitle</h6>
+        </div>
+        <img style={{height: "200px", width: "100%", display: "block"}} src={ example.image.src} alt={ example.image.desc }/>
+          <div className="card-body">
+            <p className="card-text">{ example.desc }</p>
+          </div>
+          <div className="card-body">
+            <a href="#" className="card-link">Card link</a>
+            <a href="#" className="card-link">Another link</a>
+          </div>
+          <div className="card-footer text-muted">
+            2 days ago
+          </div>
+        {/*<div className="section__example">
           <img className="section__exampleImage" alt={ example.image.desc} src={ example.image.src }/>
           <dl className="color--cloud">
             <dt className="section__exampleTitle section__text--centered">
@@ -63,12 +79,14 @@ class ExampleWorkBubble extends React.Component {
             </dt>
             <dd></dd>
           </dl>
-        </div>
+        </div>*/}
       </div>
 
     )
   }
 }
+
+
 
 export default ExampleWork;
 export { ExampleWorkBubble };
