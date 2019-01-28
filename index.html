@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alex Mireles Cloud Portfolio</title>
     <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/bootswatch.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-kW2H6mf/72/MKlmwB//Zcwg0ckiegojPx/fio14/rpoYw2LMhULTn5YhS1QyrQfx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -20,17 +21,15 @@
         <p>Full Stack Developer, Husband, Guitar Player</p>
           <br />
         <ul class="list-inline">
-          <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/alex-mireles-0a79999a/" style="color:#fff"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-          <li class="list-inline-item"><a target="_blank" href="https://github.com/MirelesCloud" style="color:#fff"><i class="fab fa-github fa-2x"></i></a></li>
-          <li class="list-inline-item"><a href="mailto:mirelescloud@gmail.com" style="color:#fff"><i class="fas fa-envelope fa-2x"></i></a></li>
-
+          <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/alex-mireles-0a79999a/" style="color:#fff"><i class="fab fa-linkedin-in fa-4x"></i></a></li>
+          <li class="list-inline-item"><a target="_blank" href="https://github.com/MirelesCloud" style="color:#fff"><i class="fab fa-github fa-4x"></i></a></li>
+          <li class="list-inline-item"><a href="mailto:mirelescloud@gmail.com" style="color:#fff"><i class="fas fa-envelope fa-4x"></i></a></li>
         </ul>
-
       </div>
     </div>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky">
       <a class="navbar-brand" href="#">MirelesCloud</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,29 +56,30 @@
       </div>
     </nav>
 
-    <!--Feature-->
-    <div class="container">
-      <div class="jumbotron mt-5">
-        <h1 class="display-5">Hello, Hola, Hallo!</h1>
-        <p class="lead">Thank you for visiting my porftolio site.</p>
-        <hr class="my-4">
-        <p>I am an AWS Certified Developer Associate, focusing on cloud computing. This serverless site is built on the ReactJS framework, tested and packaged with Jest and Webpack, and finally automated development using Codebuild, CodePipeline and Lambda.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">About me</a>
-        </p>
+    <section>
+      <!--Feature-->
+      <div class="container content">
+        <div class="jumbotron mt-5">
+          <h1 class="display-5">Hello, Hola, Hallo!</h1>
+          <p class="lead">Thank you for visiting my porftolio site.</p>
+          <hr class="my-4">
+          <p>I am an AWS Certified Developer Associate, focusing on cloud computing. This serverless site is built on the ReactJS framework, tested and packaged with Jest and Webpack, and finally automated development using Codebuild, CodePipeline and Lambda.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">About me</a>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!--My Work -->
+      <!--My Work -->
+        <div id="example-work"></div>
 
-      <div id="example-work"></div>
+      <!-- Footer -->
+      <div class="jumbotron text-center mt-5" style="margin-bottom:0">
+        <div className="copyright-text">&copy; 2019 - <a href="https://mirelescloud.com"><span style={{color:"#000"}}>MirelesCloud</span></a>.  All Rights Reserved</div>
+      </div>
+    </section>
 
 
-
-    <!-- Footer -->
-    <div class="jumbotron text-center" style="margin-bottom:0">
-      <div className="copyright-text">&copy; 2019 - <a href="https://mirelescloud.com"><span style={{color:"#000"}}>MirelesCloud</span></a>.  All Rights Reserved</div>
-    </div>
     <script type="text/javascript" src="dist/bundle.js"></script>
   </body>
 </html>

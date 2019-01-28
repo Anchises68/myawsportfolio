@@ -6,12 +6,13 @@ phases:
       - npm install
       - npm test
   build:
-    commands:  
+    commands:
       - npm run webpack
 artifacts:
   files:
     - index.html
     - favicon.ico
     - styles/main.css
+    - styles/bootswatch.css
     - images/*
     - dist/bundle.js

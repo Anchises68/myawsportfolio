@@ -32,16 +32,32 @@
   Cloud
     rgb(236, 240, 241)
 */
+body, html {
+  height: 100%;
+}
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #333;
+ position: -webkit-sticky; /* Safari */
+ position: sticky;
+ top: 0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
 
 .hero-image{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
-  background-color: #fff;
-  height: 500px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .hero-text {
