@@ -53,14 +53,14 @@ class ExampleWorkBubble extends React.Component {
   render() {
     let example = this.props.example;
     return (
-      <div className="card h-100"
+      <div className="card h-100 section__boxShadow"
         onClick={ (evt) => this.props.openModal(evt, example) }>
         <h3 className="card-header">Example</h3>
         <div className="card-body">
           <h5 className="card-title">{ example.title }</h5>
           <h6 className="card-subtitle text-muted">Support card subtitle</h6>
         </div>
-        <img style={{height: "200px", width: "100%", display: "block"}} src={ example.image.src} alt={ example.image.desc }/>
+        <img  className="section__exampleImage" style={{height: "200px", width: "100%", display: "block"}} src={ example.image.src} alt={ example.image.desc }/>
           <div className="card-body">
             <p className="card-text">{ example.desc }</p>
           </div>
@@ -71,15 +71,6 @@ class ExampleWorkBubble extends React.Component {
           <div className="card-footer text-muted">
             2 days ago
           </div>
-        {/*<div className="section__example">
-          <img className="section__exampleImage" alt={ example.image.desc} src={ example.image.src }/>
-          <dl className="color--cloud">
-            <dt className="section__exampleTitle section__text--centered">
-              { example.title }
-            </dt>
-            <dd></dd>
-          </dl>
-        </div>*/}
       </div>
 
     )

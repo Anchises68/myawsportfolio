@@ -10,15 +10,15 @@ class ExampleWorkModal extends React.Component {
       <div className={"background--skyBlue " + modalClass}>
         <span className="color--cloud modal__closeButton"
           onClick={this.props.closeModal}>
-          <i className="fa fa-window-close-o"></i>
+          <i class="far fa-times-circle"></i>
         </span>
         <img className="modal__image" alt={ example.image.desc } src={ example.image.src }/>
         <div className="color--cloud modal__text">
-          <h2 className="modal__title">
+          <h1 className="modal__title">
             { example.title }
-          </h2>
+          </h1>
           <a className="color--skyBlue modal__link"
-            href={ example.href }>
+            href={ example.href } target="_blank">
             Check it out
           </a>
           <p className="modal__description">
@@ -26,8 +26,6 @@ class ExampleWorkModal extends React.Component {
           </p>
         </div>
       </div>
-
-
     )
   };
 };

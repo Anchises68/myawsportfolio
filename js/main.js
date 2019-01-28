@@ -36,7 +36,7 @@ const myWork = [
   },
   {
     'title': "The Yellow Smoke Shop",
-    'href': "https://www.theyellowsmokeshop,com/",
+    'href': "https://www.theyellowsmokeshop.com/",
     'desc': "Head Shop",
     'spec': "CMS site using ReactJS/Gatsby.",
     'image': {
