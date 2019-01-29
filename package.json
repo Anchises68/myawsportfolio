@@ -22,8 +22,10 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "local-web-server": "^2.4.0",
+    "masonry-layout": "^4.2.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-masonry-component": "^6.2.1",
     "react-sticky": "^6.0.3"
   },
   "devDependencies": {

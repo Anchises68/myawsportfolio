@@ -1,4 +1,5 @@
 import React from 'react';
+import Masonry from 'react-masonry-component';
 import ExampleWorkModal from './example-work-modal';
 
 class ExampleWork extends React.Component {
@@ -28,19 +29,22 @@ class ExampleWork extends React.Component {
   }
 
   render() {
+
+
     return (
       <section>
         <div className="container">
-          <div className="card-columns">
+          <Masonry className="row">
+              { this.props.work.map( (example, idx) => {
+                return (
+                  <div className="col-sm-6 col-md-4 mb-5" key={idx}>
+                    <ExampleWorkBubble example={example} key={idx}
+                      openModal={this.openModal} />
+                  </div>
 
-            { this.props.work.map( (example, idx) => {
-              return (
-                <ExampleWorkBubble example={example} key={idx}
-                  openModal={this.openModal} />
-              )
-            })
-            }
-          </div>
+                )
+              })}
+          </Masonry>
         </div>
         <ExampleWorkModal example={this.state.selectedExample}
           open={this.state.modalOpen} closeModal={this.closeModal}/>
@@ -60,7 +64,7 @@ class ExampleWorkBubble extends React.Component {
           <h5 className="card-title">{ example.title }</h5>
           <h6 className="card-subtitle text-muted">Support card subtitle</h6>
         </div>
-        <img  className="section__exampleImage" style={{height: "200px", width: "100%", display: "block"}} src={ example.image.src} alt={ example.image.desc }/>
+        <img  className="section__exampleImage"  src={ example.image.src} alt={ example.image.desc }/>
           <div className="card-body">
             <p className="card-text">{ example.desc }</p>
           </div>
