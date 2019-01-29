@@ -59,21 +59,20 @@ class ExampleWorkBubble extends React.Component {
     return (
       <div className="card h-100 section__boxShadow"
         onClick={ (evt) => this.props.openModal(evt, example) }>
-        <h3 className="card-header">Example</h3>
+        <h3 className="card-header">{ example.project }</h3>
         <div className="card-body">
           <h5 className="card-title">{ example.title }</h5>
-          <h6 className="card-subtitle text-muted">Support card subtitle</h6>
+          <h6 className="card-subtitle text-muted">{ example.sub }</h6>
         </div>
         <img  className="section__exampleImage"  src={ example.image.src} alt={ example.image.desc }/>
           <div className="card-body">
             <p className="card-text">{ example.desc }</p>
           </div>
           <div className="card-body">
-            <a href="#" className="card-link">Card link</a>
-            <a href="#" className="card-link">Another link</a>
+            <a href="#" className="card-link" onClick={ (evt) => this.props.openModal(evt, example) }>Details</a>
           </div>
           <div className="card-footer text-muted">
-            2 days ago
+            { example.date }
           </div>
       </div>
 
