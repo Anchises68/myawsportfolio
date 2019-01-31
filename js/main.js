@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import ExampleWork from './example-work.js';
 console.log("loaded react-dom");
 
+const Resource = {
+  'background': "/background.jpg",
+  'me': "images/Alex.jpg"
+}
+
 const myWork = [
   {
     'project': "Current Project",
@@ -23,7 +28,7 @@ const myWork = [
     'sub': "In Development",
     'date': "November 2018",
     'href': "https://www.vapeplacecbd.com/",
-    'desc': "E-Cigarettes and CBD",
+    'desc': "Natural Vaping Oils and CBD",
     'spec': "ReactJS project built on Gatsby.  Deployed via Netlify",
     'image': {
       'desc': "Vapeplace CBD",

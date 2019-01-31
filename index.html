@@ -13,13 +13,46 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
   </head>
-
   <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="/">MirelesCloud</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#example-work">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Bottom Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:mirelescloud@gmail.com">E-Mail</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+
+
     <!--Header-->
     <div class="jumbotron text-center hero-image" style="margin-bottom:0">
       <div class="hero-text">
         <h1 class="display-4" style="color:#fff">Alex Mireles</h1>
-        <p>Full Stack Developer, Husband, Guitar Player</p>
+        <p>Developer, Husband, casual Guitarrero</p>
           <br />
         <ul class="list-inline">
           <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/alex-mireles-0a79999a/" style="color:#fff"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
@@ -29,58 +62,33 @@
       </div>
     </div>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky">
-      <a class="navbar-brand" href="#">MirelesCloud</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">My Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+      <!--My Work -->
+        <div id="example-work"></div>
 
-    <section>
-      <!--Feature-->
+      <!-- Skills -->
       <div class="container content">
-        <div class="jumbotron mt-5">
-          <h1 class="display-5">Hello, Hola, Hallo!</h1>
-          <p class="lead">Thank you for visiting my porftolio site.</p>
+        <div class="jumbotron text-center" id="skills">
+          <h1 class="display-5">Skills and Technologies</h1>
+          <p class="lead"> <h6>Mostly:</h6>
+            Javascript/ReactJS,  Gatsby, Netlify, Graphql, HTML/CSS/Bootstrap, Redux/Saga, NodeJS, DatoCMS, NextJS, Linux/OSX CLI/SSH.
+             <hr/>
+             <h6>Also:</h6>
+             AWS/EC2/S3/Cloudfront/SNS/Cloudwatch/Route53/DynamoDB/Lambda, Python, Mongoose/Postman, MySQL, Apache.
+             <hr/>
+             <h6>In the past:</h6>
+              Ruby/Rails, C++, Java, JQuery.
+            </p>
           <hr class="my-4">
-          <p>I am an AWS Certified Developer Associate, focusing on cloud computing. This serverless site is built on the ReactJS framework, tested and packaged with Jest and Webpack, and finally automated development using Codebuild, CodePipeline and Lambda.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">About me</a>
+          <p class="lead mt-5">
+            <p>Other stuff I have tinkered with can be found on <a target="_blank" href="https://github.com/MirelesCloud">my Github page</a>.</p>
           </p>
         </div>
       </div>
 
-      <!--My Work -->
-        <div id="example-work"></div>
-
       <!-- Footer -->
-      <div class="jumbotron text-center navbar-dark bg-primary mt-5" style="margin-bottom:0">
-        <div className="copyright-text">&copy; 2019 - MirelesCloud.  All Rights Reserved</div>
+      <div class="jumbotron text-center  mt-5 footer" style="margin-bottom:0">
+        <div class="copyright-text">&copy; 2019 - MirelesCloud.  All Rights Reserved</div>
       </div>
-    </section>
-
-
 
     <script type="text/javascript" src="dist/bundle.js"></script>
   </body>

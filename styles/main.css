@@ -1,3 +1,5 @@
+
+
 /*
   Theme colors
     All selectors with colors that would need
@@ -21,32 +23,40 @@
   Cloud
     rgb(236, 240, 241)
 */
+
+/*General*/
 body, html {
   height: 100%;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
   margin: 0;
- padding: 0;
- overflow: hidden;
- background-color: #333;
- position: -webkit-sticky; /* Safari */
- position: sticky;
- top: 0;
+  scroll-behavior: smooth;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.hero-image{
+/*  Hero Image */
+.hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position:relative;
+  background-size:cover;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  background-position:center center;
+  color:#ffffff;
+  box-shadow: 0 6px 2px -2px #777;
+  -webkit-box-shadow: 0 6px 2px -2px #777;
+  -moz-box-shadow: 0 6px 2px -2px #777;
+}
+
+.work-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
+  height: 100%;
+  position:relative;
+  background-size:cover;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  background-position:center center;
+  box-shadow: 0 6px 2px -2px #777;
+  -webkit-box-shadow: 0 6px 2px -2px #777;
+  -moz-box-shadow: 0 6px 2px -2px #777;
 }
 
 .hero-text {
@@ -58,6 +68,23 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+.me {
+  border-radius: 50%;
+  width: 200px;
+}
+
+/* Footer */
+.footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
+  position:relative;
+  background-size:cover;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  background-position:center center;
+
+}
+
 
 .background--skyBlue {
   background-color: rgb(44, 62, 80);
@@ -83,26 +110,7 @@ body, html {
   background-color: rgb(44, 62, 80);
 }
 
-/*
-  General Styles
-    These are styles to be inherited
-    through parent containers
 
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Cardo', serif;
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: .1rem;
-}
-*/
 /*
   Helpers
 */
