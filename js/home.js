@@ -2,67 +2,66 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slide from 'react-reveal/Slide';
-import About from './about'
-
+import About from './about.js';
 
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+       'show': false,
+      };
 
-    this.stae = {
-      'modalOpen': false,
-      'aboutModal': this.props.aboutModal
-    };
-
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
-  openModal(evt, about) {
-    this.setState({
-      'modalOpen': true,
-      'aboutModal': about
-    });
-  }
+  showModal() {
+    this.setState({ 'show': true });
+  };
 
-  closeModal(evt) {
-    this.setState({
-      'modalOpen': false
-    });
-    s
-  }
+  hideModal() {
+    this.setState({ 'show': false });
+  };
+
   render () {
+    let about = this.props.about;
     return (
       <section id="about">
-
           <div className="container content" >
-
             <div className="jumbotron mt-5"  >
+              <div className="row">
+                <div className="col-md-6 col-sm-12 col-xs-12">
+                  <div className="column-item">
+                    <Slide right>
+                      <h1 className="display-5" >Hello, Hola, Hallo!</h1>
+                    </Slide>
+                    <Slide left>
+                      <p className="lead">Thank you for visiting my porftolio site.</p>
+                    </Slide>
+                  </div>
+                </div>
+                <div className="col-md-6 col-sm-12 col-xs-12">
+                  <div className="column-item">
+                    <img src={ about.me } className="me" />
+                  </div>
 
-                  <Slide right>
-                    <h1 className="display-5" >Hello, Hola, Hallo!</h1>
-                  </Slide>
-                  <Slide left>
-                    <p className="lead">Thank you for visiting my porftolio site.</p>
-                  </Slide>
+                </div>
+              </div>
+
+
               <hr className="my-4"/>
-              <p>I work on building blazing fast web apps.  Right now I mostly use React/Graphql/Gatsby/Netlify and NodeJs.  I am also an AWS Certified Developer Associate and a big fan of cloud computing. </p>
+
+              <p>I work on building blazing fast web apps.  Right now I mostly use React/Graphql/Gatsby/Netlify and NodeJs.  I always like to learn something new.  I am also an AWS Certified Developer Associate and a big fan of cloud computing. I do this not because I have to, but because I want to.</p>
               <p className="lead">
-                <a className="btn btn-primary btn-lg" href="#" role="button">About me</a>
+                <button className="btn btn-primary btn-lg" role="button" onClick={ this.showModal }>About me</button>
               </p>
             </div>
           </div>
-
-
-
+          <About about={this.props.about} open={this.state.show} hideModal={this.hideModal}/>
       </section>
-
     )
   }
-
 }
-
-
 
 export default Home

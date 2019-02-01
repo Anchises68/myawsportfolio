@@ -31,6 +31,24 @@ body, html {
   scroll-behavior: smooth;
 }
 
+/*Modal Open and close*/
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
 /*  Hero Image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
@@ -47,7 +65,7 @@ body, html {
 }
 
 .work-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
   height: 100%;
   position:relative;
   background-size:cover;
@@ -70,13 +88,19 @@ body, html {
 }
 
 .me {
+  width: 35%;
+  height: auto;
   border-radius: 50%;
-  width: 200px;
+}
+
+.column-item {
+  margin-top: 50px;
+  text-align: center;
 }
 
 /* Footer */
 .footer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("../images/philipp-katzenberger-1313574-unsplash.jpg");
   position:relative;
   background-size:cover;
   background-repeat:repeat;
@@ -88,6 +112,19 @@ body, html {
 
 .background--skyBlue {
   background-color: rgb(44, 62, 80);
+}
+
+.background--cloud {
+  z-index:3;
+  display: block;
+  padding-top:100px;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgba(0,0,0,0.8)
 }
 
 .color--skyBlue {

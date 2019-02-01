@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work.js';
+import Home from './home.js';
 console.log("loaded react-dom");
 
-const Resource = {
+const moreResource = {
   'background': "/background.jpg",
-  'me': "images/Alex.jpg"
+  'me': "images/Alex.png",
+  'about': "images/me-dtla.jpg"
 }
 
 const myWork = [
@@ -89,4 +91,13 @@ const myWork = [
   },
 ]
 
-ReactDOM.render(<ExampleWork work={myWork}/>, document.getElementById('example-work'));
+const Layout = () => (
+  <section>
+    <Home about={moreResource}/>
+    <ExampleWork work={myWork}/>
+  </section>
+)
+
+export default Layout
+
+ReactDOM.render(<Layout/>, document.getElementById('example-work'));

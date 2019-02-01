@@ -1,8 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import ExampleWorkModal from './example-work-modal';
-import Flip from 'react-reveal/Flip';
-import Home from './home.js'
+import Zoom from 'react-reveal/Zoom';
 
 class ExampleWork extends React.Component {
   constructor(props) {
@@ -33,9 +32,9 @@ class ExampleWork extends React.Component {
   render() {
     return (
       <section>
-        <Home/>
+
         <div className="jumbotron work-background text-center" style={{textDecoration:"underline"}}>
-          <h2 style={{color:"#fff"}}>Some of my work</h2>
+          <h2 style={{color:"#fff"}}>my work</h2>
           <hr/>
           <div className="container "  >
             <Masonry className="row">
@@ -53,7 +52,7 @@ class ExampleWork extends React.Component {
         <ExampleWorkModal example={this.state.selectedExample}
           open={this.state.modalOpen} closeModal={this.closeModal}/>
       </section>
-        )
+    )
   }
 }
 
@@ -69,9 +68,9 @@ class ExampleWorkBubble extends React.Component {
             <h5 className="card-title">{ example.title }</h5>
             <h6 className="card-subtitle text-muted">{ example.sub }</h6>
           </div>
-          <Flip bottom>
+          <Zoom top>
               <img  className="section__exampleImage" src={ example.image.src} alt={ example.image.desc }/>
-          </Flip>
+          </Zoom>
 
             <div className="card-body">
               <p className="card-text">{ example.desc }</p>
