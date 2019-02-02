@@ -2,6 +2,8 @@ import React from 'react';
 import Masonry from 'react-masonry-component';
 import ExampleWorkModal from './example-work-modal';
 import Zoom from 'react-reveal/Zoom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 class ExampleWork extends React.Component {
   constructor(props) {
@@ -76,7 +78,7 @@ class ExampleWorkBubble extends React.Component {
               <p className="card-text">{ example.desc }</p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link" onClick={ (evt) => this.props.openModal(evt, example) }>Details</a>
+              <a href="#" className="card-link" onClick={ (evt) => this.props.openModal(evt, example) }>Details <FontAwesomeIcon icon={faAngleRight} className="fa-sm"/></a>
             </div>
             <div className="card-footer text-muted">
               { example.date }

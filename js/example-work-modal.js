@@ -21,9 +21,16 @@ class ExampleWorkModal extends React.Component {
             href={ example.href } target="_blank">
             Check it out
           </a>
-          <p className="modal__description">
-            { example.desc }
-          </p>
+          <div className="modal__description">
+              <strong>{ example.desc }</strong>
+            </div>
+          <div className="modal__description">
+            <p>{ example.spec }</p>
+          </div>
+          <a className="color--skyBlue modal__link"
+            href="#" target="_blank" onClick={this.props.closeModal}>
+            Close
+          </a>
         </div>
       </div>
     )

@@ -6,11 +6,9 @@ class About extends React.Component {
     let about = this.props.about;
     let modalClass = this.props.open ? 'modal--open' : 'modal--closed';
 
-
     return (
       <section className={"background--cloud " + modalClass}>
-
-          <div className="modal-dialog" role="document">
+          <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">And...</h5>
@@ -28,9 +26,8 @@ class About extends React.Component {
                   <div className="col-md-6 col-sm-12 col-xs-12">
                     <div className="column-item">
                       <h5>..the noteworthy...</h5>
-                      <p>I'm a UCLA graduate, live in So Cal., speak German and Spanish, and drink beer.  In a previous life I worked in the financial services industry and business; primarily in analytical and managerial roles. I have no regrets on giving that up. I do this because I want to not because I have to.</p>
+                      <p>I'm a UCLA graduate, live in So Cal., speak German and Spanish, and drink beer.  In a previous life I worked in the financial services industry and business; primarily in analytical and managerial roles. Now I'm doing what I want and love to do.</p>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -39,7 +36,6 @@ class About extends React.Component {
               </div>
             </div>
           </div>
-
       </section>
     )
   }

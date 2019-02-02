@@ -41,13 +41,14 @@ body, html {
   display: none;
 }
 
-.about-image {
-  width: 100%;
-  height: auto;
-  border-radius: 2%;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+button:hover {
+  opacity: 0.8;
 }
+
+.card-body:hover {
+  opacity: 0.5;
+}
+
 
 /*  Hero Image */
 .hero-image {
@@ -277,8 +278,31 @@ body, html {
 }
 
 /*
-  Modal
+  About Modal
 */
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-dialog {
+    max-width: 330px;
+  }
+
+  .background--skyBlue {
+    max-width: 375px;
+    height: auto;
+  }
+
+  .content {
+    max-width: 375px;
+  }
+}
 
 .modal--closed {
   display: none;
@@ -287,7 +311,7 @@ body, html {
 .modal--open {
   display: block;
   position: fixed;
-  top: 0;
+  top: 75px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -300,20 +324,20 @@ body, html {
   position: absolute;
   right: 2rem;
   top: 5rem;
-  font-size: 4rem;
+  font-size: 2rem;
   z-index: 1;
   curson: pointer;
 }
 
 .modal__title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
 }
 .modal__text {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   padding: 2rem;
   width: 66%;
 }
@@ -321,11 +345,16 @@ body, html {
 .modal__link {
   background-color: white;
   border-radius: 4px;
+  font-size: 1rem;
   padding: 0.4rem 1rem;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+.modal__description {
+  margin-top: 20px;
+}
 .modal__image {
   opacity: 0.2;
+  text-align: justify;
 }

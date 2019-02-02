@@ -45,16 +45,12 @@ class Home extends React.Component {
                   <div className="column-item">
                     <img src={ about.me } className="me" />
                   </div>
-
                 </div>
               </div>
-
-
               <hr className="my-4"/>
-
-              <p>I work on building blazing fast web apps.  Right now I mostly use React/Graphql/Gatsby/Netlify and NodeJs.  I always like to learn something new.  I am also an AWS Certified Developer Associate and a big fan of cloud computing. I do this not because I have to, but because I want to.</p>
+              <p>I work on building blazing fast web apps.  Right now I mostly use React/Graphql/Gatsby/Netlify and NodeJs.  I always like to learn something new.  I am also an AWS Certified Developer Associate and a big fan of serverless cloud computing.</p>
               <p className="lead">
-                <button className="btn btn-primary btn-lg" role="button" onClick={ this.showModal }>About me</button>
+                <button className="btn btn-primary btn-lg active" role="button" aria-pressed="true" onClick={ this.showModal }>About me</button>
               </p>
             </div>
           </div>
